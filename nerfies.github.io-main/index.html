@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces. ICUAS 2026 paper website.">
+  <meta name="keywords" content="Spinning Quadrotor, hover thrust augmentation, passive lifting surfaces, ICUAS 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════  NAVBAR  ═══════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#Abstract">Abstract</a>
+      <a class="navbar-item" href="#ProjectFlow">How It Works</a>
+      <a class="navbar-item" href="#Media">Videos</a>
+      <a class="navbar-item" href="#BibTeX">Citation</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════  HERO HEADER  ═══════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            Spinning Quadrotor: Hover Thrust Augmentation<br>with Passive Lifting Surfaces
+          </h1>
+
+          <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
+            <span class="author-block">Aniketh Parkala,</span>
+            <span class="author-block">Harikumar Kandath</span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="margin-top: 0.4rem;">
+            <span class="author-block">Robotics Research Center (RRC), IIIT Hyderabad</span>
+          </div>
+
+          <div class="is-size-6 publication-venue" style="margin: 0.6rem auto 0; display: inline-block;">
+            ICUAS 2026
+          </div>
+
+          <!-- Action buttons -->
+          <div class="column has-text-centered" style="margin-top: 1.5rem;">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./ICUAS_camera_ready_v2_compressed.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper PDF</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/pyromania99/spinning-quadrotor-hover"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#Media" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-video"></i></span>
+                  <span>Videos</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-quote-right"></i></span>
+                  <span>Citation</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          <!-- /Action buttons -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  HERO IMAGE / TEASER  ═══════════════════════ -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="publication-banner">
+        <img src="./hero.png"
+             alt="Spinning Quadrotor — passive lifting surfaces augment hover thrust"
+             class="paper-hero-image">
+      </figure>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        Intentional steady rotation turns a quadrotor hover condition into an opportunity for
+        <strong>passive lift augmentation</strong> — achieving a&nbsp;<strong>22% reduction</strong> in required hover thrust.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  ABSTRACT  ═══════════════════════ -->
+<section class="section" id="Abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Conventional multirotor aerial vehicles actively suppress yaw rotation during hover,
+            expending power to maintain a fixed heading despite the fact that yaw regulation is not
+            required for force balance or altitude control. This paper challenges that paradigm by
+            proposing a <strong>spinning quadrotor architecture</strong> that intentionally operates at a
+            sustained yaw rate, converting power traditionally spent on yaw regulation into useful
+            aerodynamic effects. A dynamic model of the spinning quadrotor is developed, and analysis
+            for the low Reynolds-number range is conducted to choose an airfoil for the passive lifting
+            surfaces. Preliminary hardware tests show a <strong>22% reduction in thrust required</strong>.
+            These findings suggest that intentional yaw rotation, rather than being suppressed, can be
+            exploited as a design mechanism for efficient and robust multirotor flight.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  PROJECT FLOW  ═══════════════════════ -->
+<section class="section" id="ProjectFlow">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How It Works</h2>
+    <p class="has-text-centered" style="margin-bottom: 2.5rem; color: #555;">
+      Four key stages take the concept from physical insight to verified hardware results.
+    </p>
+
+    <div class="flow-pipeline">
+
+      <!-- Step 1 -->
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <span class="flow-icon"><i class="fas fa-lightbulb"></i></span>
+          <span class="flow-step-number">01</span>
+        </div>
+        <div class="flow-content">
+          <h3 class="flow-title">Concept &amp; Motivation</h3>
+          <p class="flow-desc">
+            Traditional quadrotors burn energy fighting yaw torque imbalance to hold a fixed heading.
+            We flip this: allow the body to spin freely and harness that rotation to generate passive lift
+            via fixed-wing surfaces attached to the arms.
+          </p>
+          <div class="flow-tags">
+            <span class="flow-tag">Yaw Energy Recovery</span>
+            <span class="flow-tag">Passive Lift</span>
+            <span class="flow-tag">Fixed-Wing Surfaces</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector"><i class="fas fa-chevron-down"></i></div>
+
+      <!-- Step 2 -->
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <span class="flow-icon"><i class="fas fa-calculator"></i></span>
+          <span class="flow-step-number">02</span>
+        </div>
+        <div class="flow-content">
+          <h3 class="flow-title">Dynamic Modelling</h3>
+          <p class="flow-desc">
+            A full rigid-body dynamic model of the spinning quadrotor is derived, accounting for
+            gyroscopic effects, arm-mounted wing aerodynamics, and rotor thrust coupling under
+            steady yaw-rate conditions.
+          </p>
+          <div class="flow-tags">
+            <span class="flow-tag">Rigid-Body Dynamics</span>
+            <span class="flow-tag">Gyroscopic Effects</span>
+            <span class="flow-tag">Thrust Coupling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector"><i class="fas fa-chevron-down"></i></div>
+
+      <!-- Step 3 -->
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <span class="flow-icon"><i class="fas fa-wind"></i></span>
+          <span class="flow-step-number">03</span>
+        </div>
+        <div class="flow-content">
+          <h3 class="flow-title">Airfoil Selection &amp; BEMT / CFD Analysis</h3>
+          <p class="flow-desc">
+            Low-Reynolds-number aerodynamic analysis (BEMT + CFD) is performed to select an
+            airfoil profile optimised for the operating regime of the rotating arms, balancing
+            lift coefficient, drag, and structural simplicity.
+          </p>
+          <div class="flow-tags">
+            <span class="flow-tag">Low-Re Airfoils</span>
+            <span class="flow-tag">BEMT</span>
+            <span class="flow-tag">CFD Simulation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector"><i class="fas fa-chevron-down"></i></div>
+
+      <!-- Step 4 -->
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <span class="flow-icon flow-icon--success"><i class="fas fa-microchip"></i></span>
+          <span class="flow-step-number">04</span>
+        </div>
+        <div class="flow-content">
+          <h3 class="flow-title">Hardware Validation</h3>
+          <p class="flow-desc">
+            Tabletop and flight-test experiments confirm the model predictions. With passive lifting
+            surfaces mounted, the platform achieves hover at <strong>22% lower thrust</strong>,
+            translating directly into extended endurance and payload capacity.
+          </p>
+          <div class="flow-tags">
+            <span class="flow-tag">−22% Hover Thrust</span>
+            <span class="flow-tag">Flight Tests</span>
+            <span class="flow-tag">Extended Endurance</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.flow-pipeline -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  MEDIA  ═══════════════════════ -->
+<section class="section" id="Media">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Videos &amp; Media</h2>
+    <p class="has-text-centered media-intro">
+      Live hardware demonstrations of the spinning quadrotor in two configurations.
+    </p>
+
+    <!-- ── Two side-by-side config videos ── -->
+    <div class="media-dual-grid">
+
+      <!-- Config I -->
+      <div class="media-video-card media-video-card--primary">
+        <div class="media-config-badge">Config I</div>
+        <div class="media-video-wrap media-video-wrap--tall">
+          <video controls playsinline preload="metadata"
+                 aria-label="Config I — Asymmetric 2-wing spinning quadrotor">
+            <source src="./static/videos/config1_asymmetric.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="media-caption">
+          <strong>Asymmetric — 2 Wings</strong><br>
+          2 motors at r&nbsp;=&nbsp;0.5&nbsp;m (10° cant) · 2 motors at r&nbsp;=&nbsp;0.3&nbsp;m ·
+          2 passive wings spanning r&nbsp;=&nbsp;0.40–0.65&nbsp;m. Compact test rig validating the spinning-hover concept.
+        </div>
+      </div>
+
+      <!-- Config II -->
+      <div class="media-video-card media-video-card--primary">
+        <div class="media-config-badge media-config-badge--green">Config II</div>
+        <div class="media-video-wrap media-video-wrap--tall">
+          <video controls playsinline preload="metadata"
+                 aria-label="Config II — Symmetric 4-wing spinning quadrotor">
+            <source src="./static/videos/config2_symmetric.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="media-caption">
+          <strong>Symmetric — 4 Wings</strong><br>
+          All 4 motors at r&nbsp;=&nbsp;0.3&nbsp;m (10° cant) · 4 passive wings spanning r&nbsp;=&nbsp;0.40–0.65&nbsp;m.
+          Balanced loading; <strong>22% less hover thrust</strong> achieved in hardware tests.
+        </div>
+      </div>
+
+    </div><!-- /.media-dual-grid -->
+
+    <!-- ── YouTube full-length video ── -->
+    <div class="media-yt-wrap">
+      <h3 class="media-section-label">Full Flight Demo (YouTube)</h3>
+      <div class="media-yt-embed">
+        <iframe
+          src="https://www.youtube.com/embed/q07RIcLkxVw"
+          title="Spinning Quadrotor — Full Flight Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- ── Download / extra links ── -->
+    <div class="media-extra-row">
+      <a href="./icuas_presentation.pptx" class="media-extra-card">
+        <span class="media-extra-icon"><i class="fas fa-file-powerpoint"></i></span>
+        <div>
+          <div class="media-extra-title">Conference Slides</div>
+          <div class="media-extra-sub">ICUAS 2026 presentation (.pptx)</div>
+        </div>
+        <span class="media-extra-arrow"><i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="./ICUAS_camera_ready_v2_compressed.pdf" class="media-extra-card">
+        <span class="media-extra-icon"><i class="fas fa-file-pdf"></i></span>
+        <div>
+          <div class="media-extra-title">Full Paper (PDF)</div>
+          <div class="media-extra-sub">Camera-ready version — ICUAS 2026</div>
+        </div>
+        <span class="media-extra-arrow"><i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  CITATION  ═══════════════════════ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <p>If you find this work useful, please cite the ICUAS&nbsp;2026 paper below.</p>
+    <pre><code>@inproceedings{parkala2026spinningquadrotor,
+  author    = {Parkala, Aniketh and Kandath, Harikumar},
+  title     = {Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces},
+  booktitle = {2026 International Conference on Unmanned Aircraft Systems (ICUAS)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./ICUAS_camera_ready_v2_compressed.pdf" aria-label="Paper PDF">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/pyromania99/spinning-quadrotor-hover" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Layout adapted from the <a href="https://nerfies.github.io">Nerfies</a> website template,
+            compatible with static GitHub Pages hosting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
