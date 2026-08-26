@@ -7,6 +7,8 @@
   <meta name="keywords" content="Spinning Quadrotor, hover thrust augmentation, passive lifting surfaces, ICUAS 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces</title>
+  <meta name="citation_doi" content="10.1109/ICUAS69441.2026.11598692">
+  <link rel="alternate" href="https://doi.org/10.1109/ICUAS69441.2026.11598692">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -90,6 +92,13 @@
                 </a>
               </span>
               <span class="link-block">
+                <a href="https://doi.org/10.1109/ICUAS69441.2026.11598692"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-doi"></i></span>
+                  <span>DOI</span>
+                </a>
+              </span>
+              <span class="link-block">
                 <a href="https://github.com/pyromania99/spinning-quadrotor-hover"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
@@ -120,42 +129,37 @@
 
 
 <!-- ═══════════════════════  HERO IMAGE / TEASER  ═══════════════════════ -->
-<section class="hero teaser">
+<section class="section hero teaser" id="Abstract">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <figure class="publication-banner">
-        <img src="./hero.png"
-             alt="Spinning Quadrotor — passive lifting surfaces augment hover thrust"
-             class="paper-hero-image">
-      </figure>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
-        Intentional steady rotation turns a quadrotor hover condition into an opportunity for
-        <strong>passive lift augmentation</strong> — achieving a&nbsp;<strong>22% reduction</strong> in required hover thrust.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════  ABSTRACT  ═══════════════════════ -->
-<section class="section" id="Abstract">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Conventional multirotor aerial vehicles actively suppress yaw rotation during hover,
-            expending power to maintain a fixed heading despite the fact that yaw regulation is not
-            required for force balance or altitude control. This paper challenges that paradigm by
-            proposing a <strong>spinning quadrotor architecture</strong> that intentionally operates at a
-            sustained yaw rate, converting power traditionally spent on yaw regulation into useful
-            aerodynamic effects. A dynamic model of the spinning quadrotor is developed, and analysis
-            for the low Reynolds-number range is conducted to choose an airfoil for the passive lifting
-            surfaces. Preliminary hardware tests show a <strong>22% reduction in thrust required</strong>.
-            These findings suggest that intentional yaw rotation, rather than being suppressed, can be
-            exploited as a design mechanism for efficient and robust multirotor flight.
-          </p>
+      <div class="columns is-variable is-6 is-vcentered">
+        <div class="column is-half">
+          <figure class="publication-banner">
+            <img src="./hero.png"
+                 alt="Spinning Quadrotor — passive lifting surfaces augment hover thrust"
+                 class="paper-hero-image">
+          </figure>
+          <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+            Intentional steady rotation turns a quadrotor hover condition into an opportunity for
+            <strong>passive lift augmentation</strong> — achieving a&nbsp;<strong>22% reduction</strong> in required hover thrust.
+          </h2>
+        </div>
+        <div class="column is-half">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Conventional multirotor aerial vehicles actively suppress yaw rotation during hover,
+              expending power to maintain a fixed heading despite the fact that yaw regulation is not
+              required for force balance or altitude control. This paper challenges that paradigm by
+              proposing a <strong>spinning quadrotor architecture</strong> that intentionally operates at a
+              sustained yaw rate, converting power traditionally spent on yaw regulation into useful
+              aerodynamic effects. A dynamic model of the spinning quadrotor is developed, and analysis
+              for the low Reynolds-number range is conducted to choose an airfoil for the passive lifting
+              surfaces. Preliminary hardware tests show a <strong>22% reduction in thrust required</strong>.
+              These findings suggest that intentional yaw rotation, rather than being suppressed, can be
+              exploited as a design mechanism for efficient and robust multirotor flight.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -358,11 +362,13 @@
   <div class="container is-max-desktop content">
     <h2 class="title">Citation</h2>
     <p>If you find this work useful, please cite the ICUAS&nbsp;2026 paper below.</p>
+    <p><strong>DOI:</strong> <a href="https://doi.org/10.1109/ICUAS69441.2026.11598692">10.1109/ICUAS69441.2026.11598692</a></p>
     <pre><code>@inproceedings{parkala2026spinningquadrotor,
   author    = {Parkala, Aniketh and Kandath, Harikumar},
   title     = {Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces},
   booktitle = {2026 International Conference on Unmanned Aircraft Systems (ICUAS)},
   year      = {2026},
+  doi       = {10.1109/ICUAS69441.2026.11598692},
 }</code></pre>
   </div>
 </section>
