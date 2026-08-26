@@ -4,12 +4,17 @@ This is the repository that contains source code for the [Nerfies website](https
 
 If you find Nerfies useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}
+@INPROCEEDINGS{11598692,
+  author={Parkala, Aniketh and Kandath, Harikumar},
+  booktitle={2026 International Conference on Unmanned Aircraft Systems (ICUAS)}, 
+  title={Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={227-234},
+  keywords={Motors;Spinning;Equations;Modeling;Tagging;Automotive components;Steady-state;Surfaces;Torque;Vehicles},
+  doi={10.1109/ICUAS69441.2026.11598692}}
+
 ```
 
 # Website License
